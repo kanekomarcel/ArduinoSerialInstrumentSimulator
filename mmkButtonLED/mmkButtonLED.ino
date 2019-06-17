@@ -26,7 +26,9 @@ void setup() {
   pinMode(buttonPin, INPUT);
   // initialize serial:
   Serial.begin(9600);
-
+  while (!Serial) {
+    
+  }
   randomSeed(analogRead(0));
   valor = random(1000,10000);
 }
@@ -35,7 +37,7 @@ void setup() {
    Função que lê uma string da Serial
    e retorna-a
 */
-String leStringSerial() {
+String leStringSerial(float valorDisplay) {
   String conteudo = "";
   char caractere;
 
@@ -52,10 +54,28 @@ String leStringSerial() {
     delay(10);
   }
 
-  Serial.print("Recebi: ");
-  Serial.println(conteudo);
+  //Serial.print("Recebi: ");
+  if (conteudo == "5") {
+    Serial.print(valorDisplay, 2);
+    Serial.println(" ");
+  }
+  if (conteudo == "6") {
+    Serial.println(11.11, 2);
+    Serial.println(" ");
+  }
 
   return conteudo;
+}
+
+void blink( int cont ) {
+
+  int count = 0;
+  while (count < cont) {
+    digitalWrite(ledPin, HIGH);
+    delay(1000);
+    digitalWrite(ledPin, LOW);
+    count++;
+  }
 }
 
 // the loop function runs over and over again forever
@@ -78,30 +98,19 @@ void loop() {
   // Se receber algo pela serial
   if (Serial.available() > 0) {
     // Lê toda string recebida
-    String recebido = leStringSerial();
+    String recebido = leStringSerial(valor/100);
 
     if (recebido == "5") {
-      digitalWrite(ledPin, HIGH);
-      //
-      Serial.println(valor/100);
-      delay(1000);
-      digitalWrite(ledPin, LOW);
+      //Serial.println(valor/100);
+      blink(1);
+    } else {
+      blink(2);
     }
     if (recebido == "3") {
       valor = 0;
-      Serial.println(valor);
-      digitalWrite(ledPin, LOW);
-      //
     }
 
   }
-
-  if (blinking) {
-    //digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
-    //delay(1000);                       // wait for a second
-    //digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
-    //delay(1000);
-  }// wait for a second
 }
 
 

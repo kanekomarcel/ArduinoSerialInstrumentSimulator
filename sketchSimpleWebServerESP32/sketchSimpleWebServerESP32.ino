@@ -6,8 +6,8 @@
 #define TXD2 17
 
 /*Put your SSID & Password*/
-const char* ssid = "Kanekos";  // Enter SSID here
-const char* password = "kanekomarcel";  //Enter Password here
+const char* ssid = "";  // Enter SSID here
+const char* password = "";  //Enter Password here
 
 WebServer server(80);
 

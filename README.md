@@ -23,8 +23,7 @@
 
 This project contains folders for: 
 
-<a href="https://github.com/kanekomarcel/ArduinoSerialInstrumentSimulator/tree/master/SerialInstrumentWithLCD">
-### Arduino Serial Instrument Simulator
+### <a href="https://github.com/kanekomarcel/ArduinoSerialInstrumentSimulator/tree/master/SerialInstrumentWithLCD">Arduino Serial Instrument Simulator
 </a>
 
 Tested on an Arduino Uno with a <a href="https://www.filipeflop.com/produto/display-lcd-shield-com-teclado-para-arduino/" target="blank">LCD Shield</a>

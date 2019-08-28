@@ -27,12 +27,12 @@ This project contains folders for:
 ### Arduino Serial Instrument Simulator
 </a>
 
-> Tested on an Arduino Uno with a <a href="https://www.filipeflop.com/produto/display-lcd-shield-com-teclado-para-arduino/" target="blank">LCD Shield</a>
+Tested on an Arduino Uno with a <a href="https://www.filipeflop.com/produto/display-lcd-shield-com-teclado-para-arduino/" target="blank">LCD Shield</a>
 
-> Simulates one instrument that can communicate via serial port and receive the following commands:
+Simulates one instrument that can communicate via serial port and receive the following commands:
 - Get Value (send "5"): Arduino responds with the current number being shown on the display
 
-> The LCD display has the following inputs:
+The LCD display has the following inputs:
 - SELECT: randomizes current value
 - LEFT: sets current value to 0.0
 - RIGHT: sends current value to serial port
@@ -40,17 +40,17 @@ This project contains folders for:
 <a href="https://github.com/kanekomarcel/ArduinoSerialInstrumentSimulator/tree/master/sketchSimpleWebServerESP32">
 ### ESP32 Simple Web Server
 
-> Tested on a standard ESP32 Dev Module. 
+Tested on a standard ESP32 Dev Module. 
 
-> Edit WIFI SSID and password to connect ESP32 to your network. 
+Edit WIFI SSID and password to connect ESP32 to your network. 
 
-> Upload program using 115200 speed. Open Serial Monitor and start the ESP32. It will plot its IP.
+Upload program using 115200 speed. Open Serial Monitor and start the ESP32. It will plot its IP.
 
-> Connect to the simulated instrument on Arduino via RX/TX 2 ports (16 and 17).
+Connect to the simulated instrument on Arduino via RX/TX 2 ports (16 and 17).
 
-> ESP32 will continuously send "5" to serial ports to get current value.
+ESP32 will continuously send "5" to serial ports to get current value.
 
-> Access http://<ESP32_IP>/ to view current value.
+Access http://<ESP32_IP>/ to view current value.
 
 ## Contributing
 

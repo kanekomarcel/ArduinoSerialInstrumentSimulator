@@ -36,8 +36,7 @@ The LCD display has the following inputs:
 - LEFT: sets current value to 0.0
 - RIGHT: sends current value to serial port
 
-<a href="https://github.com/kanekomarcel/ArduinoSerialInstrumentSimulator/tree/master/sketchSimpleWebServerESP32">
-### ESP32 Simple Web Server
+### <a href="https://github.com/kanekomarcel/ArduinoSerialInstrumentSimulator/tree/master/sketchSimpleWebServerESP32">ESP32 Simple Web Server </a>
 
 Tested on a standard ESP32 Dev Module. 
 
